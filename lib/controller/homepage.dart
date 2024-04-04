@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/controller/login.dart';
+import 'package:flutter_application_1/controller/inicio.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     List<Widget> _tabBarView(){
       return [
         Center(
-          child: LoginPage(title: 'Tab 1',),
+          child: Inicio(),
         ),
       ];
     }
