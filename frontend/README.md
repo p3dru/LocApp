@@ -25,19 +25,12 @@ lib/
 ## 🛠️ Configuração do Ambiente de Desenvolvimento
 
 1. Certifique-se de ter o Flutter instalado.
-2. Clone este repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/locappp_front.git
-   ```
-3. Navegue até o diretório do projeto:
-   ```bash
-   cd locappp_front
-   ```
-4. Instale as dependências:
+2. Clone este repositório.
+3. Instale as dependências:
    ```bash
    flutter pub get
    ```
-5. Inicie o aplicativo em um emulador ou dispositivo conectado:
+4. Inicie o aplicativo em um emulador ou dispositivo conectado:
    ```bash
    flutter run
    ```
