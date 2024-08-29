@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:locapp_front/widgets/bottom.navigation.dart';
+import 'package:frontend/widgets/bottom.navigation.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

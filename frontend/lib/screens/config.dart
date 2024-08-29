@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:locapp_front/widgets/bottom.navigation.dart';
+import 'package:frontend/widgets/bottom.navigation.dart';
 
 class ConfigPage extends StatefulWidget {
   const ConfigPage({super.key});
