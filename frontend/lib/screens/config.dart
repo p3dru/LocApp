@@ -18,7 +18,7 @@ class _ConfigPageState extends State<ConfigPage> {
           'Configurações',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.blue,
+        backgroundColor: Theme.of(context).colorScheme.primary,
       ),
       body: SingleChildScrollView(
         child: Text('ConfigPage'),

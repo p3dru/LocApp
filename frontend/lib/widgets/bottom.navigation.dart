@@ -17,6 +17,7 @@ class BottomNavigation extends StatelessWidget {
           case 2:
             Navigator.pushNamed(context, "/config");
             break;
+         
         };
       },
       items: [

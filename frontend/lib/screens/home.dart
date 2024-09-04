@@ -14,11 +14,13 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'LocApp',
-          style: TextStyle(color: Colors.white),
+        title: Center(
+          child: Text(
+            'Bem-Vindo ao LocApp',
+            style: TextStyle(color: Colors.white),
+          ),
         ),
-        backgroundColor: Colors.blue,
+        backgroundColor: Theme.of(context).colorScheme.primary,
         automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
