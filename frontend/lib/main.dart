@@ -16,8 +16,8 @@ class MainApp extends StatelessWidget {
       title: 'Locapp',
       theme: ThemeData(
         colorScheme: const ColorScheme.light(
-          background: Colors.white,
-          onBackground: Colors.black,
+          surface: Colors.white,
+          onSurface: Colors.black,
           primary: Color.fromARGB(255, 251, 117, 22),
           onPrimary: Colors.black,
           secondary: Color.fromARGB(255, 52, 152, 219),
@@ -30,9 +30,9 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => WelcomeScreen(),
-        '/home': (context) => HomePage(),
-        '/config': (context) => ConfigPage(),
+        '/': (context) => const WelcomeScreen(),
+        '/home': (context) => const HomePage(),
+        '/config': (context) => const ConfigPage(),
       }
     );
   }
