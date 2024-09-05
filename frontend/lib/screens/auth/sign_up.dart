@@ -14,6 +14,8 @@ class _SignUpState extends State<SignUp> {
   final senhaController = TextEditingController();
   final emailController = TextEditingController();
   final nomeController = TextEditingController();
+  bool _isLocadorSelected = false;
+  String _userType = 'Locador';
   final _formKey = GlobalKey<FormState>();
   IconData iconSenha = CupertinoIcons.eye_fill;
   bool obscureSenha = true;
@@ -71,6 +73,29 @@ class _SignUpState extends State<SignUp> {
               ),
             ),
           ),
+          const SizedBox(height: 5,),
+          Container(
+            width: MediaQuery.of(context).size.width * 0.8,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Radio(
+                      value: true,
+                      groupValue: _isLocadorSelected,
+                      onChanged: (value) {
+                        setState(() {
+                          _isLocadorSelected = value!;
+                        });
+                      },
+                    ),
+                    Text('Sou Locador'),
+                  ],
+                ),
+              ],
+            ),
+          ),
           const SizedBox(height: 20,),
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.5,
@@ -78,7 +103,7 @@ class _SignUpState extends State<SignUp> {
               onPressed:() {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
+                  MaterialPageRoute(builder: (context) => const HomePage()),
                   );
               },
               style: TextButton.styleFrom(
