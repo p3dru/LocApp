@@ -83,16 +83,6 @@ class _SignUpState extends State<SignUp> {
                   spacing: 100,
                   children: [
                     Radio(
-                      value: true,
-                      groupValue: _isLocadorSelected,
-                      onChanged: (value) {
-                        setState(() {
-                          _isLocadorSelected = value!;
-                        });
-                      },
-                    ),
-                    Text('Sou Locador'),
-                    Radio(
                       value: false,
                       groupValue: _isLocadorSelected,
                       onChanged: (value) {
@@ -102,6 +92,16 @@ class _SignUpState extends State<SignUp> {
                       },
                     ),
                     Text('Sou Locatário'),
+                    Radio(
+                      value: true,
+                      groupValue: _isLocadorSelected,
+                      onChanged: (value) {
+                        setState(() {
+                          _isLocadorSelected = value!;
+                        });
+                      },
+                    ),
+                    Text('Sou Locador'),
                   ],
                 ),
               ],
