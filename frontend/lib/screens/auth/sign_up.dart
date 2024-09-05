@@ -79,7 +79,8 @@ class _SignUpState extends State<SignUp> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Row(
+                Wrap(
+                  spacing: 100,
                   children: [
                     Radio(
                       value: true,
@@ -91,6 +92,16 @@ class _SignUpState extends State<SignUp> {
                       },
                     ),
                     Text('Sou Locador'),
+                    Radio(
+                      value: false,
+                      groupValue: _isLocadorSelected,
+                      onChanged: (value) {
+                        setState(() {
+                          _isLocadorSelected = value!;
+                        });
+                      },
+                    ),
+                    Text('Sou Locatário'),
                   ],
                 ),
               ],
