@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/screens/auth/components/my_text_field.dart';
-import 'package:frontend/screens/home.dart';
+import 'package:frontend/screens/home/root_page.dart';
 
 class SigInScreen extends StatefulWidget {
   const SigInScreen({super.key});
@@ -67,7 +67,7 @@ class _SigInScreenState extends State<SigInScreen> {
               onPressed:() {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const HomePage()),
+                  MaterialPageRoute(builder: (context) => const RootPage()),
                   );
               },
               style: TextButton.styleFrom(
@@ -84,7 +84,7 @@ class _SigInScreenState extends State<SigInScreen> {
                   'Entrar',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black54,
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                   ),

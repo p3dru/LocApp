@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:frontend/screens/auth/welcome_screen.dart';
 import 'package:frontend/screens/profile/edit_info/user_edit_info.dart';
 import 'package:frontend/widgets/bottom.navigation.dart';
 
@@ -14,17 +15,6 @@ class _UserProfileState extends State<UserProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Center(
-          child: Text(
-            'Perfil',
-            style: TextStyle(color: Colors.white),
-          ),
-        ),
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        automaticallyImplyLeading: false,
-      ),
-
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(12),
@@ -54,7 +44,7 @@ class _UserProfileState extends State<UserProfile> {
                       );
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Theme.of(context).colorScheme.tertiary,
+                    backgroundColor: Theme.of(context).colorScheme.primary,
                   ),
                   child: const Text('Editar perfil', style: TextStyle(color: Colors.black),),
                   ),
@@ -73,13 +63,14 @@ class _UserProfileState extends State<UserProfile> {
                 title: "Sair", 
                 icon: CupertinoIcons.xmark_circle_fill, 
                 textColor: Colors.red,
-                onPressed: (){}
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => WelcomeScreen()));
+                }
                 ),
             ],
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigation(),
     );
   }
 }

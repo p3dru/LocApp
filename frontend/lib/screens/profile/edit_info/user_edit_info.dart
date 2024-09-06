@@ -21,10 +21,9 @@ class UserEditInfo extends StatelessWidget {
         title: Center(
             child: Text(
               'Editar Perfil',
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.black54),
             ),
           ),
-          backgroundColor: Theme.of(context).colorScheme.primary,
       ),
       body: SingleChildScrollView(
       child: Container(
@@ -119,7 +118,7 @@ class UserEditInfo extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: (){},
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Theme.of(context).colorScheme.tertiary,
+                          backgroundColor: Theme.of(context).colorScheme.primary,
                           side: BorderSide.none,
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                         ),

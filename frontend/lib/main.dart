@@ -1,6 +1,6 @@
 import 'package:frontend/screens/auth/welcome_screen.dart';
 import 'package:frontend/screens/config.dart';
-import 'package:frontend/screens/home.dart';
+import 'package:frontend/screens/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/screens/profile/user_profile.dart';
 
@@ -19,11 +19,11 @@ class MainApp extends StatelessWidget {
         colorScheme: const ColorScheme.light(
           surface: Colors.white,
           onSurface: Colors.black,
-          primary: Color.fromARGB(255, 230, 97, 20),
+          primary: Color.fromARGB(255, 255, 127, 80),
           onPrimary: Colors.black,
-          secondary: Color.fromARGB(255, 42, 101, 173),
+          secondary: Color.fromARGB(255, 200, 162, 200), 
           onSecondary: Colors.white,
-          tertiary: Color.fromARGB(255, 255, 167, 66),
+          tertiary: Color.fromARGB(255, 240, 230, 210),
           error: Colors.red,
           outline: Color(0xFF424242)
         ),
