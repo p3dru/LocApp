@@ -2,6 +2,7 @@ import 'package:frontend/screens/auth/welcome_screen.dart';
 import 'package:frontend/screens/config.dart';
 import 'package:frontend/screens/home.dart';
 import 'package:flutter/material.dart';
+import 'package:frontend/screens/profile/user_profile.dart';
 
 void main() {
   runApp(const MainApp());
@@ -32,7 +33,8 @@ class MainApp extends StatelessWidget {
       routes: {
         '/': (context) => const WelcomeScreen(),
         '/home': (context) => const HomePage(),
-        '/config': (context) => const ConfigPage(),
+        // '/config': (context) => const ConfigPage(),
+        '/user': (context) => const UserProfile(),
       }
     );
   }

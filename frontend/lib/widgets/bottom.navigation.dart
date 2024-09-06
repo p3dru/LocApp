@@ -15,11 +15,20 @@ class BottomNavigation extends StatelessWidget {
             Navigator.pushNamed(context, "/pedidos");
             break;
           case 2:
-            Navigator.pushNamed(context, "/config");
+            Navigator.pushNamed(context, "/user");
             break;
          
         };
       },
+      type: BottomNavigationBarType.shifting,
+      elevation: 0,
+      mouseCursor: SystemMouseCursors.grab,
+      selectedFontSize: 13,
+      selectedIconTheme: IconThemeData(
+      color: Theme.of(context).colorScheme.primary, 
+      size: 20,
+      ),
+      unselectedItemColor: Colors.grey,
       items: [
         BottomNavigationBarItem(
             icon: Icon(Icons.home),

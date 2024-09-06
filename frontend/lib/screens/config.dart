@@ -23,7 +23,7 @@ class _ConfigPageState extends State<ConfigPage> {
       body: const SingleChildScrollView(
         child: Text('ConfigPage'),
       ),
-      bottomNavigationBar: const BottomNavigation(),
+     /* bottomNavigationBar: const BottomNavigation(),*/
     );
   }
 }

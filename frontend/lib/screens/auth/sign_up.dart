@@ -14,8 +14,8 @@ class _SignUpState extends State<SignUp> {
   final senhaController = TextEditingController();
   final emailController = TextEditingController();
   final nomeController = TextEditingController();
-  bool _isLocadorSelected = false;
-  String _userType = 'Locador';
+  bool _isLocatario = false;
+  bool _isLocador = false;
   final _formKey = GlobalKey<FormState>();
   IconData iconSenha = CupertinoIcons.eye_fill;
   bool obscureSenha = true;
@@ -75,38 +75,33 @@ class _SignUpState extends State<SignUp> {
           ),
           const SizedBox(height: 5,),
           Container(
-            width: MediaQuery.of(context).size.width * 0.8,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Wrap(
-                  spacing: 100,
-                  children: [
-                    Radio(
-                      value: false,
-                      groupValue: _isLocadorSelected,
-                      onChanged: (value) {
-                        setState(() {
-                          _isLocadorSelected = value!;
-                        });
-                      },
-                    ),
-                    Text('Sou Locatário'),
-                    Radio(
-                      value: true,
-                      groupValue: _isLocadorSelected,
-                      onChanged: (value) {
-                        setState(() {
-                          _isLocadorSelected = value!;
-                        });
-                      },
-                    ),
-                    Text('Sou Locador'),
-                  ],
-                ),
-              ],
+              width: MediaQuery.of(context).size.width * 0.8,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Checkbox(
+                    value: _isLocador,
+                    onChanged: (value) {
+                      setState(() {
+                        _isLocador = value!;
+                        _isLocatario = !_isLocador;
+                      });
+                    },
+                  ),
+                  Text('Sou Locador'),
+                  Checkbox(
+                    value: _isLocatario,
+                    onChanged: (value) {
+                      setState(() {
+                        _isLocatario = value!;
+                        _isLocador = !_isLocatario;
+                      });
+                    },
+                  ),
+                  Text('Sou Locatário'),
+                ],
+              ),
             ),
-          ),
           const SizedBox(height: 20,),
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.5,

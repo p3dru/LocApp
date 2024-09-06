@@ -74,7 +74,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: SizedBox(
-                    height: MediaQuery.of(context).size.height / 1.4,
+                    height: MediaQuery.of(context).size.height / 1.5,
                     child: Column(
                       children: [
                         Padding(
