@@ -41,7 +41,7 @@ class _UserLocadorPerfilState extends State<UserLocadorPerfil> {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => UserLocadorEditProfile()));
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Theme.of(context).colorScheme.primary,
+                    backgroundColor: Theme.of(context).colorScheme.secondary,
                   ),
                   child: const Text('Editar perfil', style: TextStyle(color: Colors.black),),
                 ),

@@ -118,7 +118,7 @@ class UserEditInfo extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: (){},
                       style: ElevatedButton.styleFrom(
-                          backgroundColor: Theme.of(context).colorScheme.primary,
+                          backgroundColor: Theme.of(context).colorScheme.secondary,
                           side: BorderSide.none,
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                         ),

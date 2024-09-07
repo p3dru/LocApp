@@ -43,7 +43,7 @@ class _UserProfileState extends State<UserProfile> {
                       );
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Theme.of(context).colorScheme.primary,
+                    backgroundColor: Theme.of(context).colorScheme.secondary,
                   ),
                   child: const Text('Editar perfil', style: TextStyle(color: Colors.black),),
                   ),
@@ -106,7 +106,7 @@ class ProfileMenu extends StatelessWidget {
               height: 30,
               decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(100),
-              color: Colors.grey.withOpacity(0.1),
+              color: Colors.transparent
               ),
               child: const Icon(Icons.arrow_forward_ios, color: Colors.black87, size: 16,),
             ) : null, 

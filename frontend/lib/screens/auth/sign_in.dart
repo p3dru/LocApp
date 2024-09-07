@@ -72,7 +72,7 @@ class _SigInScreenState extends State<SigInScreen> {
               },
               style: TextButton.styleFrom(
                 elevation: 3.0,
-                backgroundColor: Theme.of(context).colorScheme.primary,
+                backgroundColor: Theme.of(context).colorScheme.secondary,
                 foregroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(60),

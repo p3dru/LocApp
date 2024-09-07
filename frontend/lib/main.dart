@@ -17,13 +17,13 @@ class MainApp extends StatelessWidget {
       title: 'Locapp',
       theme: ThemeData(
         colorScheme: const ColorScheme.light(
-          surface: Color.fromARGB(255, 255, 255, 255),
+          surface: Color.fromARGB(255, 246, 248, 252),
           onSurface: Colors.black,
-          primary: Color.fromARGB(255, 144, 202, 249),
+          primary: Color.fromARGB(255, 89, 131, 230),
           onPrimary: Colors.black,
-          secondary: Color.fromARGB(255, 255, 183, 77), 
+          secondary: Color.fromARGB(255, 230, 114, 90), 
           onSecondary: Colors.white,
-          tertiary: Color.fromARGB(255, 255, 224, 178),
+          tertiary: Color.fromARGB(255, 187, 230, 126),
           error: Colors.red,
           outline: Color(0xFF424242)
         ),
