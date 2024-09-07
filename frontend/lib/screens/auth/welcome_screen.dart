@@ -1,8 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:frontend/screens/auth/sign_in.dart';
-import 'package:frontend/screens/auth/sign_up.dart';
+import 'package:frontend/screens/auth/sign_process/sign_in.dart';
+import 'package:frontend/screens/auth/sign_process/sign_up.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -68,15 +68,24 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
               BackdropFilter(
                 filter: ImageFilter.blur(sigmaX: 100.0, sigmaY: 100.0),
                 child: Container(
-
-                ),
+                    color: Colors.transparent,
+                  ),
                 ),
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: SizedBox(
-                    height: MediaQuery.of(context).size.height / 1.5,
+                    height: MediaQuery.of(context).size.height / 1.4,
                     child: Column(
                       children: [
+                        Text(
+                          'Entre no LocApp e comece a explorar!',
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                           
+                          ),
+                        ),
+                        const SizedBox(height: 50,),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 50.0),
                           child: TabBar(

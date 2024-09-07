@@ -1,3 +1,4 @@
+import 'package:frontend/screens/auth/introduction_screen.dart';
 import 'package:frontend/screens/auth/welcome_screen.dart';
 import 'package:frontend/screens/config.dart';
 import 'package:frontend/screens/home/home.dart';
@@ -31,7 +32,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => const WelcomeScreen(),
+        '/': (context) => const IntroductionScreen(),
         '/home': (context) => const HomePage(),
         // '/config': (context) => const ConfigPage(),
         '/user': (context) => const UserProfile(),
