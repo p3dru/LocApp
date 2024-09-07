@@ -1,7 +1,7 @@
 import 'package:frontend/screens/auth/welcome_screen.dart';
-import 'package:frontend/screens/config.dart';
 import 'package:frontend/screens/home/home.dart';
 import 'package:flutter/material.dart';
+import 'package:frontend/screens/location/location-details.dart';
 import 'package:frontend/screens/profile/user_profile.dart';
 
 void main() {
@@ -33,6 +33,7 @@ class MainApp extends StatelessWidget {
       routes: {
         '/': (context) => const WelcomeScreen(),
         '/home': (context) => const HomePage(),
+        '/location': (context) => const LocationDetails(),
         // '/config': (context) => const ConfigPage(),
         '/user': (context) => const UserProfile(),
       }
