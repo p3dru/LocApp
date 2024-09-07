@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/screens/home/home.dart';
-import 'package:frontend/screens/profile/edit_info/user_edit_info.dart';
 import 'package:frontend/screens/profile/user_profile.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart'; 
 
@@ -64,7 +63,7 @@ class _RootPageState extends State<RootPage> {
         icons: iconList,
         backgroundColor: Theme.of(context).colorScheme.surface,
         activeIndex: _bottomNavIndex,
-        gapLocation: GapLocation.center,
+        gapLocation: GapLocation.end,
         notchSmoothness: NotchSmoothness.softEdge,
         onTap: (index){
           setState(() {

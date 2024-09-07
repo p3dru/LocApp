@@ -55,7 +55,7 @@ class _UserProfileState extends State<UserProfile> {
 
               ProfileMenu(title: "Configuração", icon: CupertinoIcons.gear, onPressed: (){},),
               ProfileMenu(title: "Detalhes das Locações", icon: CupertinoIcons.calendar, onPressed: (){},),
-              ProfileMenu(title: "User Management", icon: CupertinoIcons.person_alt_circle, onPressed: (){},),
+              ProfileMenu(title: "Conta", icon: CupertinoIcons.person_alt_circle, onPressed: (){},),
               const Divider(height: 10, thickness: 0.1, color: Colors.grey, ),
               ProfileMenu(title: "Informação", icon: CupertinoIcons.info, onPressed: (){}),
               ProfileMenu(

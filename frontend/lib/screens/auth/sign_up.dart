@@ -37,23 +37,37 @@ class _SignUpState extends State<SignUp> {
               prefixIcon: const Icon(CupertinoIcons.mail_solid),
             ),
           ),
-           const SizedBox(height: 10,),
-            SizedBox(
-              width: MediaQuery.of(context).size.width * 0.8,
-              child: CustomTextField(
-                controller: nomeController,
-                hintText: 'Nome',
-                obscureText: false,
-                keyboardType: TextInputType.text,
-                prefixIcon: const Icon(CupertinoIcons.person),
-              ),
-            ),
           const SizedBox(height: 10,),
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.8,
             child: CustomTextField(
               controller: senhaController,
               hintText: 'Senha',
+              obscureText: obscureSenha,
+              keyboardType: TextInputType.visiblePassword,
+              prefixIcon: const Icon(CupertinoIcons.lock_fill),
+
+               suffixIcon: IconButton(
+                onPressed: () {
+                  setState(() {
+                    obscureSenha = !obscureSenha;
+                    if(obscureSenha){
+                      iconSenha = CupertinoIcons.eye_fill;
+                    } else {
+                      iconSenha = CupertinoIcons.eye_slash_fill;
+                    }
+                  });
+                },
+                icon: Icon(iconSenha),
+              ),
+            ),
+          ),
+          const SizedBox(height: 10,),
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.8,
+            child: CustomTextField(
+              controller: senhaController,
+              hintText: 'Confirmar Senha',
               obscureText: obscureSenha,
               keyboardType: TextInputType.visiblePassword,
               prefixIcon: const Icon(CupertinoIcons.lock_fill),
