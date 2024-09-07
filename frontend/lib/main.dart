@@ -21,9 +21,9 @@ class MainApp extends StatelessWidget {
           onSurface: Colors.black,
           primary: Color.fromARGB(255, 255, 127, 80),
           onPrimary: Colors.black,
-          secondary: Color.fromARGB(255, 200, 162, 200), 
+          secondary: Color.fromARGB(255, 240, 120, 220) , 
           onSecondary: Colors.white,
-          tertiary: Color.fromARGB(255, 240, 230, 210),
+          tertiary: Color.fromARGB(255, 250, 200, 180),
           error: Colors.red,
           outline: Color(0xFF424242)
         ),

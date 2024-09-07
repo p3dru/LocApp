@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> {
                     width: 200,
                     margin: const EdgeInsets.symmetric(horizontal: 10),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Theme.of(context).colorScheme.surface,
                       borderRadius: BorderRadius.circular(20),
                       boxShadow: [
                         BoxShadow(
@@ -214,7 +214,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
 
-            // Lista de adições recentes
+            
            // Lista de adições recentes
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -225,7 +225,7 @@ class _HomePageState extends State<HomePage> {
               itemBuilder: (BuildContext context, int index) {
                 return Container(
                   decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.secondary.withOpacity(.1),
+                    color: Theme.of(context).colorScheme.tertiary.withOpacity(.1),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   height: 88.0,

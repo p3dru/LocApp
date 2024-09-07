@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/screens/auth/welcome_screen.dart';
 import 'package:frontend/screens/profile/edit_info/user_edit_info.dart';
-import 'package:frontend/widgets/bottom.navigation.dart';
 
 class UserProfile extends StatefulWidget {
   const UserProfile({super.key});
@@ -61,7 +60,7 @@ class _UserProfileState extends State<UserProfile> {
               ProfileMenu(title: "Informação", icon: CupertinoIcons.info, onPressed: (){}),
               ProfileMenu(
                 title: "Sair", 
-                icon: CupertinoIcons.xmark_circle_fill, 
+                icon: Icons.logout, 
                 textColor: Colors.red,
                 onPressed: (){
                   Navigator.push(context, MaterialPageRoute(builder: (context) => WelcomeScreen()));
@@ -99,10 +98,6 @@ class ProfileMenu extends StatelessWidget {
       leading: Container(
         width: 40, 
         height: 40,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(100),
-          color: Theme.of(context).colorScheme.secondary.withOpacity(0.1),
-        ),
         child: Icon(icon),
       ),
       title: Text(title, style: Theme.of(context).textTheme.bodyMedium?.apply(color: textColor),),
@@ -113,7 +108,7 @@ class ProfileMenu extends StatelessWidget {
               borderRadius: BorderRadius.circular(100),
               color: Colors.grey.withOpacity(0.1),
               ),
-              child: const Icon(CupertinoIcons.forward, color: Colors.grey,),
+              child: const Icon(Icons.arrow_forward_ios, color: Colors.black87, size: 16,),
             ) : null, 
     );
    
