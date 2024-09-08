@@ -69,12 +69,12 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
                   children: [
                     Text(
                       'Bem-Vindo ao LocApp!',
-                      style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 2,),
                     Text(
                       'Por-favor, escolha uma das opções abaixo',
-                      style: TextStyle(fontSize: 14,),
+                      style: TextStyle(fontSize: 16,),
                     ),
                     const SizedBox(height: 50,),
                     ConstrainedBox(
@@ -85,10 +85,10 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Theme.of(context).colorScheme.secondary,
-                          fixedSize: const Size(300, 100),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                          fixedSize: const Size(250, 50),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
                         ),
-                        child: const Text('Sou Locador', style: TextStyle(color: Colors.black87, fontSize: 20, fontWeight: FontWeight.bold),),
+                        child: const Text('Sou Locador', style: TextStyle(color: Colors.black87, fontSize: 18, fontWeight: FontWeight.bold),),
                       ),
                     ),
                     const SizedBox(height: 20,),
@@ -100,10 +100,10 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Theme.of(context).colorScheme.secondary,
-                          fixedSize: const Size(300, 100),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                          fixedSize: const Size(250, 50),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
                         ),
-                        child: const Text('Sou Locatário', style: TextStyle(color: Colors.black87, fontSize: 20, fontWeight: FontWeight.bold),),
+                        child: const Text('Sou Locatário', style: TextStyle(color: Colors.black87, fontSize: 18, fontWeight: FontWeight.bold),),
                       ),
                     ),
                   ],

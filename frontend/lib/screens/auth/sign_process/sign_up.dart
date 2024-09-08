@@ -109,7 +109,7 @@ class _SignUpState extends State<SignUp> {
                   'Entrar',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Colors.black54,
+                    color: Colors.black87,
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
                   ),

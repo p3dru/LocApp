@@ -50,13 +50,34 @@ class _UserLocadorPerfilState extends State<UserLocadorPerfil> {
               const Divider(thickness: 0.1, color: Colors.grey,),
               const SizedBox(height: 10,),
 
-              ProfileMenu(title: 'Configuração', icon: CupertinoIcons.gear, onPressed: (){},),
-              ProfileMenu(title: 'Registro de Locatários', icon: CupertinoIcons.calendar, onPressed: (){}),
-              ProfileMenu(title: 'Conta', icon: CupertinoIcons.person_alt_circle, onPressed: (){}),
+              ProfileMenu(
+                title: 'Configuração', 
+                subtitle: "",
+                icon: CupertinoIcons.gear, 
+                onPressed: (){},),
+
+              ProfileMenu(
+                title: 'Registro de Locatários', 
+                subtitle: "",
+                icon: CupertinoIcons.calendar,
+                 onPressed: (){}),
+
+              ProfileMenu(
+                title: 'Conta', 
+                subtitle: "",
+                icon: CupertinoIcons.person_alt_circle, 
+                onPressed: (){}),
+
               const Divider(height: 10, thickness: 0.1, color: Colors.grey,),
-              ProfileMenu(title: 'Informação', icon: CupertinoIcons.info, onPressed: (){}),
+              ProfileMenu(
+                title: 'Informação', 
+                subtitle: "",
+                icon: CupertinoIcons.info, 
+                onPressed: (){}),
+
               ProfileMenu(
                 title: "Sair", 
+                subtitle: "",
                 icon: Icons.logout, 
                 textColor: Colors.red,
                 onPressed: (){

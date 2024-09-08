@@ -35,14 +35,22 @@ class UserEditInfo extends StatelessWidget {
             children: [
               Center(
                 child: SizedBox(
-                    width: 120,
-                    height: 120,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(100),
-                      child:  const Image(image: NetworkImage("https://th.bing.com/th/id/OIP.6vwZcc33X4K1oOH5puuU_gHaF7?w=225&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"),),
+                      width: 120,
+                      height: 120,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(100),
+                        child:  const Image(image: NetworkImage("https://th.bing.com/th/id/OIP.6vwZcc33X4K1oOH5puuU_gHaF7?w=225&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"),),
+                      ),
+                    ),
+              ),
+                  SizedBox(height: 2,),
+                  Center(
+                    child: TextButton(
+                      onPressed: (){},
+                      child: Text('Atualizar Imagem', style: TextStyle(color: Colors.black),),
                     ),
                   ),
-              ),
+              
               const SizedBox(height: 20,),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
