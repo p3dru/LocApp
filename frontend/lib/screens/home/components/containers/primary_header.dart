@@ -13,7 +13,7 @@ class PrimaryHeaderContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return CurvedEdgeWidget(
       child: Container(
-        color: Theme.of(context).colorScheme.primary.withOpacity(.1),
+        color: Theme.of(context).colorScheme.primary.withOpacity(.2),
         padding: const EdgeInsets.all(0),
         child: SizedBox(
           width: MediaQuery.of(context).size.width,
@@ -31,7 +31,7 @@ class PrimaryHeaderContainer extends StatelessWidget {
                 top: 100,
                 right: -300,
                 child: CircularContainer(
-                  backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.1),
+                  backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(.1),
                 ),
               ),
               child, 

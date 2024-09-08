@@ -133,7 +133,7 @@ class _HomePageState extends State<HomePage> {
                             },
                             child: Container(
                               width: 200,
-                              margin: const EdgeInsets.symmetric(horizontal: 20,),
+                              margin: const EdgeInsets.symmetric(horizontal: 10,),
                               decoration: BoxDecoration(
                                 color: Theme.of(context).colorScheme.surface,
                                 borderRadius: BorderRadius.circular(15),
