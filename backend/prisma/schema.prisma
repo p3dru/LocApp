@@ -1,0 +1,103 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./database.db"
+}
+
+model User {
+  id       String @id @default(uuid())
+  name     String
+  email    String
+  password String
+  image    String?
+
+  role  String @default("USER")
+
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @updatedAt
+
+  @@map("users")
+  @@index([name, email, password])
+  Locacao Locacao[]
+}
+
+
+model Dia {
+  id String @id @default(uuid())
+  diaDaSemana String
+
+  @@map("dias")
+  Estabelecimento Estabelecimento[]
+}
+
+model Horario {
+  id String @id @default(uuid())
+  horario Int
+  @@map("horarios")
+  Estabelecimento Estabelecimento[]
+}
+
+model Categoria {
+  id String @id @default(uuid())
+  categoria String
+  @@map("categorias")
+  Estabelecimento Estabelecimento[]
+}
+
+model Atividade {
+  id String @id @default(uuid())
+  atividade String
+  @@map("atividades")
+  Estabelecimento Estabelecimento[]
+}
+
+model Estabelecimento{
+  id String @id @default(uuid())
+  nome String
+  email String
+  senha String
+  descricao String
+  valorLocacao Float
+  endereco String
+  cidade String
+  estado String
+  linkMaps String
+  imagemPerfil String 
+  ativo Boolean @default(false)
+  imagens EstabelecimentoImagem[]
+  dias Dia[]
+  horarios Horario[]
+  categoria Categoria @relation(fields: [categoriaid], references: [id])
+  atividades Atividade[]
+
+  categoriaid String
+
+  Locacao Locacao[]
+}
+
+model EstabelecimentoImagem {
+  id String @id @default(uuid())
+  url String
+  estabelecimento Estabelecimento @relation(fields: [estabelecimentoId], references: [id], onDelete: Cascade)
+  estabelecimentoId String
+
+  @@map("estabelecimento_imagens")
+}
+
+
+model Locacao {
+  id String @id @default(uuid())
+  userId String
+  estabelecimentoId String
+  ativo Boolean @default(false)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  estabelecimento Estabelecimento @relation(fields: [estabelecimentoId], references: [id], onDelete: Cascade)
+}
